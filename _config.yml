@@ -9,7 +9,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: WeijianDuan
 github_username:  GymRat102
 
-theme: jekyll-bear-theme
+theme: null
 
 plugins:
   - jekyll-feed

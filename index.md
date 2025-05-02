@@ -3,6 +3,8 @@ layout: default
 title: Hello
 ---
 
+> We can only see a short distance ahead, but we can see plenty there that needs to be done. -- Alan Turing
+
 ## Hi, I'm Weijian
 
 **A programmer by trade**. I didn't plan to work with code, at least professionally, but it ends up being the thing that drives me to always learn more. Building things is not just a job, it's something fun and with endless possibility.

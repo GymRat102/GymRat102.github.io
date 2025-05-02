@@ -1,0 +1,249 @@
+
+      
+      
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --width: 900px;
+    --font-main: 'Fira Code', monospace;
+    --font-secondary: 'Fira Code', monospace;
+    --font-scale: .95em;
+    --background-color: #F8F1E5; /* Lighter cream */
+    --heading-color: #2C1E15; /* Darker roast coffee */
+    --text-color: #1F1408; /* Darker espresso */
+    --link-color: #7C4011; /* Darker caramel */
+    --visited-color: #5E3211; /* Darker roasted coffee beans */
+    --main-color: #96572D; /* Darker café au lait */
+    --code-background-color: #E6D7C3; /* Coffee stained paper */
+    --code-color: #2C1E15; /* Darker roast coffee */
+    --blockquote-color: #B99B6B; /* Darker café latte foam */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1A1310; /* Darker espresso */
+        --heading-color: #F0DFC0; /* Lighter café latte foam */
+        --text-color: #F0E6D2; /* Lighter coffee stained paper */
+        --link-color: #E5A254; /* Lighter caramel drizzle */
+        --visited-color: #C49B76; /* Lighter roasted coffee beans */
+        --main-color: #B89470; /* Lighter mocha */
+        --code-background-color: #2C2117; /* Dark chocolate coffee */
+        --code-color: #F0DFC0; /* Lighter café latte foam */
+        --blockquote-color: #6E563D; /* Lighter coffee grounds */
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    font-family: var(--font-main);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 3px solid var(--main-color);
+}
+
+a:hover {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #232333;
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+strong,
+b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+header {
+  border-bottom: 3px dotted var(--main-color);
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 3px dotted var(--main-color);
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer > span:has(a[href="https://bearblog.dev"]) {
+    display: none;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight,
+.code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+i time {
+    font-style: normal;
+    opacity: 0.7;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+table {
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 6px 13px;
+    font-size: 1em;
+}
+
+/* external link marker */
+a[href^="http"]:where(:not([href*="knhash.in/"])):not(:has(img))::after {
+    content: "↗"
+}
+
+/* Form elements */
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+legend {
+  margin: 20px 0;
+  font-weight: bold;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+input,
+textarea {
+  margin: 0 0 10px;
+  padding: 5px 10px;
+  color: var(--text-color);
+  background: var(--accent-color);
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+}
+input {
+  width: 55%;
+}
+textarea {
+  width: 95%;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  margin: 0 0 20px;
+  padding: 7px;
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  color: var(--background-color);
+  background: var(--link-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+      
+  
