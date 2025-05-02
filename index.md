@@ -9,8 +9,6 @@ title: Hello
 
 **A programmer by trade**. I didn't plan to work with code, at least professionally, but it ends up being the thing that drives me to always learn more. Building things is not just a job, it's something fun and with endless possibility.
 
-~~My work~~ Not much work can be found [@GymRat102](https://github.com/GymRat102) on GitHub.
-
 There are quite a few other things I am/was into and would love to have **serious discussion**:
 
 - NBA, Snooker & Sports at large
