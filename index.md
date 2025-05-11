@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Hello
+title: Home
 ---
-
-> We can only see a short distance ahead, but we can see plenty there that needs to be done. -- Alan Turing
 
 ## Hi, I'm Weijian
 
