@@ -3,14 +3,12 @@ layout: default
 title: Home
 ---
 
-## Hi, I'm Weijian
+## Hi, I'm Weijian Duan
 
-**A programmer by trade**. I didn't plan to work with code, at least professionally, but it ends up being the thing that drives me to always learn more. Building things is not just a job, it's something fun and with endless possibility.
+**I am a programmer by trade**.
 
-There are quite a few other things I am/was into and would love to have **serious discussion**:
+Actually I didn't plan to work with code, at least professionally, but it ends up being the thing that drives me to always learn more. I really want to strip away the "job" part of being a programmer and explore the fun and creative part of it.
 
-- NBA, Snooker & Sports at large
-- Media and Journalism
-- U.S. Politics
+That's it **for now**.
 
-Message welcomed at [weijianduan0302@gmail.com](mailto:weijianduan0302@gmail.com). I am also reachable on Twitter (not X) [@WeijianDuan](https://twitter.com/WeijianDuan), Bluesky [@weijianduan.bsky.social](https://bsky.app/profile/weijianduan.bsky.social).
+You can shoot me an email at [weijianduan0302@gmail.com](mailto:weijianduan0302@gmail.com). I am also reachable on Twitter (not X) [@WeijianDuan](https://twitter.com/WeijianDuan), Bluesky [@weijianduan.bsky.social](https://bsky.app/profile/weijianduan.bsky.social).
