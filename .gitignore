@@ -7,3 +7,5 @@ _site/
 vendor/
 
 .DS_Store
+
+transfer_attachments.py
