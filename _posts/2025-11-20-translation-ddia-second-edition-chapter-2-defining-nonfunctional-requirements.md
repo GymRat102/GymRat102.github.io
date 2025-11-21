@@ -22,6 +22,10 @@ date: 2025-11-20 21:29 +0800
 
 
 
+---
+
+
+
 If you are building an application, you will be driven by a list of requirements. At the top of your list is most likely the functionality that the application must offer: what screens and what buttons you need, and what each operation is supposed to do in order to fulfill the purpose of your software. These are your functional requirements.
 
 如果你正在构建一个应用程序，你将被一系列的需求来驱动。在您的需求列表顶端，最有可能的是应用程序必须提供的功能：需要哪些屏幕和按钮，以及每个操作应实现何种功能以满足软件的目标。这些就是您的**功能性需求**。
