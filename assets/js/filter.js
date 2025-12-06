@@ -29,6 +29,13 @@
         filterPosts(category, postItems);
       });
     });
+
+    // Apply initial filter on page load
+    const activeButton = document.querySelector('.filter-btn.active');
+    if (activeButton) {
+      const initialCategory = activeButton.getAttribute('data-category');
+      filterPosts(initialCategory, postItems);
+    }
   }
 
   function filterPosts(selectedCategory, postItems) {
@@ -37,42 +44,23 @@
       
       // Hide posts without categories regardless of selected filter
       if (!categories || categories.trim() === '') {
-        hidePost(item);
+        item.style.display = 'none';
         return;
       }
       
       if (selectedCategory === 'all') {
         // Show all posts that have categories
-        showPost(item);
+        item.style.display = '';
       } else {
         // Check if post has the selected category
         const categoryArray = categories.split(',').map(c => c.trim());
         if (categoryArray.includes(selectedCategory)) {
-          showPost(item);
+          item.style.display = '';
         } else {
-          hidePost(item);
+          item.style.display = 'none';
         }
       }
     });
-  }
-
-  function showPost(item) {
-    item.style.display = '';
-    // Trigger reflow for animation
-    item.offsetHeight;
-    item.classList.add('show');
-    item.classList.remove('hide');
-  }
-
-  function hidePost(item) {
-    item.classList.add('hide');
-    item.classList.remove('show');
-    // Hide after animation completes
-    setTimeout(() => {
-      if (item.classList.contains('hide')) {
-        item.style.display = 'none';
-      }
-    }, 300);
   }
 })();
 
