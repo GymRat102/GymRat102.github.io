@@ -10,8 +10,8 @@
     
     if (!article || !tocContainer) return;
 
-    // Get all h2 and h3 headings from the article
-    const headings = article.querySelectorAll('h2, h3');
+    // Get all h2, h3, and h4 headings from the article
+    const headings = article.querySelectorAll('h2, h3, h4');
     
     if (headings.length === 0) {
       tocContainer.innerHTML = '<p class="no-toc">本文暂无目录</p>';
@@ -68,7 +68,7 @@
     const article = document.getElementById('articleContent');
     if (!article) return;
 
-    const headings = article.querySelectorAll('h2, h3');
+    const headings = article.querySelectorAll('h2, h3, h4');
     const tocLinks = document.querySelectorAll('.toc-link');
     
     if (headings.length === 0 || tocLinks.length === 0) return;

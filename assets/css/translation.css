@@ -87,6 +87,11 @@
   margin-top: 0.5rem;
 }
 
+.toc-h4 {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
 .toc-link {
   display: block;
   color: #555;
