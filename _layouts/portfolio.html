@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="portfolio-page">
+  {%- if page.title -%}
+    <h1 class="portfolio-heading">{{ page.title }}</h1>
+  {%- endif -%}
+  
+  {%- if page.description -%}
+    <p class="portfolio-description">{{ page.description }}</p>
+  {%- endif -%}
+
+  {%- assign tag_to_filter = page.tag_filter | default: 'translation' -%}
+  {%- assign filtered_count = 0 -%}
+  {%- for post in site.posts -%}
+    {%- if post.tags contains tag_to_filter -%}
+      {%- assign filtered_count = filtered_count | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  
+  {%- if filtered_count > 0 -%}
+    <div class="portfolio-grid">
+      {%- for post in site.posts -%}
+        {%- if post.tags contains tag_to_filter -%}
+        <article class="portfolio-card">
+          <a href="{{ post.url | relative_url }}" class="portfolio-card-link">
+            <h2 class="portfolio-card-title">{{ post.title | escape }}</h2>
+            <div class="portfolio-card-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+            </div>
+            {%- if post.excerpt -%}
+              <div class="portfolio-card-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+              </div>
+            {%- endif -%}
+            {%- if post.categories -%}
+              <div class="portfolio-card-categories">
+                {%- for category in post.categories -%}
+                  <span class="portfolio-card-category">{{ category }}</span>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </a>
+        </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <p class="portfolio-empty">暂无文章</p>
+  {%- endif -%}
+</div>
+
