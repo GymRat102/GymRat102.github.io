@@ -21,7 +21,7 @@ title: "$TITLE"
 tag: [translation]
 date: $DATE
 cover: $COVER
-description: 
+description: (Learning In Progress...)
 why_link: 
 review_link: 
 ---
