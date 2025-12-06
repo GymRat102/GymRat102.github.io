@@ -21,7 +21,7 @@
 title: Weijian Duan's Blog
 email: weijianduan0302@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  想象另一种可能
+  Imagine the alternatives 想象另一种可能
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: WeijianDuan
@@ -40,11 +40,9 @@ jekyll_compose:
   default_front_matter:
     drafts:
       layout: post
-      description:
       categories: []
     posts:
       layout: post
-      description:
       categories: []
 # Exclude from processing.
 # The following items will not be processed, by default.
