@@ -34,6 +34,18 @@ plugins:
   - jekyll-compose
 
 permalink: /blog/:title
+
+# Jekyll Compose configuration
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      description:
+      categories: []
+    posts:
+      layout: post
+      description:
+      categories: []
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -35,8 +35,14 @@
     postItems.forEach(item => {
       const categories = item.getAttribute('data-categories');
       
-      if (selectedCategory === 'all' || !categories) {
-        // Show all posts
+      // Hide posts without categories regardless of selected filter
+      if (!categories || categories.trim() === '') {
+        hidePost(item);
+        return;
+      }
+      
+      if (selectedCategory === 'all') {
+        // Show all posts that have categories
         showPost(item);
       } else {
         // Check if post has the selected category

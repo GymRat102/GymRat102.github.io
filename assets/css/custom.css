@@ -97,3 +97,68 @@
   }
 }
 
+/* Translation Layout Styles */
+.translation-cover {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.translation-cover img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.translation-description {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #666;
+  margin: 1rem 0 1.5rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #007acc;
+  border-radius: 4px;
+}
+
+.translation-links {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f5f9ff;
+  border-radius: 6px;
+  border: 1px solid #d0e4ff;
+}
+
+.translation-links p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.translation-links a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.translation-links a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode support for translation styles */
+@media (prefers-color-scheme: dark) {
+  .translation-description {
+    background-color: #2d2d2d;
+    color: #ccc;
+    border-left-color: #007acc;
+  }
+
+  .translation-links {
+    background-color: #1a2332;
+    border-color: #2d4566;
+  }
+
+  .translation-links a {
+    color: #4da6ff;
+  }
+}
+

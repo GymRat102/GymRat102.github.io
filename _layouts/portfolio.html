@@ -25,25 +25,47 @@ layout: default
         {%- if post.tags contains tag_to_filter -%}
         <article class="portfolio-card">
           <a href="{{ post.url | relative_url }}" class="portfolio-card-link">
+            {%- if post.cover -%}
+              <div class="portfolio-card-cover">
+                <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" />
+              </div>
+            {%- endif -%}
             <h2 class="portfolio-card-title">{{ post.title | escape }}</h2>
             <div class="portfolio-card-meta">
               <time datetime="{{ post.date | date_to_xmlschema }}">
                 {{ post.date | date: "%Y-%m-%d" }}
               </time>
             </div>
-            {%- if post.excerpt -%}
+            {%- if post.description -%}
+              <div class="portfolio-card-excerpt">
+                {{ post.description }}
+              </div>
+            {%- elsif post.excerpt -%}
               <div class="portfolio-card-excerpt">
                 {{ post.excerpt | strip_html | truncatewords: 30 }}
               </div>
             {%- endif -%}
-            {%- if post.categories -%}
-              <div class="portfolio-card-categories">
-                {%- for category in post.categories -%}
-                  <span class="portfolio-card-category">{{ category }}</span>
-                {%- endfor -%}
-              </div>
-            {%- endif -%}
           </a>
+          <div class="portfolio-card-links">
+            {%- if post.why_link -%}
+              <a href="{{ post.why_link | relative_url }}" class="portfolio-card-link-item">
+                Why This Book?
+              </a>
+            {%- else -%}
+              <span class="portfolio-card-link-item portfolio-card-link-item-disabled">
+                Why This Book?
+              </span>
+            {%- endif -%}
+            {%- if post.review_link -%}
+              <a href="{{ post.review_link | relative_url }}" class="portfolio-card-link-item">
+                My Review
+              </a>
+            {%- else -%}
+              <span class="portfolio-card-link-item portfolio-card-link-item-disabled">
+                My Review
+              </span>
+            {%- endif -%}
+          </div>
         </article>
         {%- endif -%}
       {%- endfor -%}
